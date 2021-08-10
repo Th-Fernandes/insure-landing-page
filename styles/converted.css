@@ -23,6 +23,11 @@ body button {
   background: transparent;
 }
 
+.sectionContainer {
+  width: 80vw;
+  margin: auto;
+}
+
 /* >> HEADER << */
 header {
   width: 100vw;
@@ -50,76 +55,58 @@ header .header-container nav button {
 /* >> MAIN << */
 main {
   width: 100vw;
-  background-color: #2d2640;
   font-family: "Karla", sans-serif;
 }
-main section {
-  width: 80vw;
-  margin: 0 auto;
-}
 main section#planView {
+  background-color: #2d2640;
+  width: 100vw;
+}
+main section#planView div.sectionContainer {
   height: 65rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main section#planView div.viewPlans {
+main section#planView div.sectionContainer div.viewPlans {
   width: min(55.2rem, 100%);
   height: 40rem;
 }
-main section#planView div.viewPlans .line {
+main section#planView div.sectionContainer div.viewPlans .line {
   background: #fafafa;
   color: transparent;
   margin-bottom: 5rem;
   width: 32%;
   height: 0.1rem;
 }
-main section#planView div.viewPlans article {
+main section#planView div.sectionContainer div.viewPlans article {
   color: #fafafa;
 }
-main section#planView div.viewPlans article h1 {
+main section#planView div.sectionContainer div.viewPlans article h1 {
   font-size: clamp(1rem, 7.2rem, 20vw);
   font-weight: 700;
 }
-main section#planView div.viewPlans article p {
+main section#planView div.sectionContainer div.viewPlans article p {
   font-size: 1.6rem;
   line-height: 1.8;
   margin: 2rem 0 3rem;
 }
-main section#planView div.viewPlans button.genericButton {
+main section#planView div.sectionContainer div.viewPlans button.genericButton {
   border: 2px solid #fafafa;
   color: #fafafa;
   font-size: 1.4rem;
   width: 15rem;
 }
-main section#planView div.familyImg {
+main section#planView div.sectionContainer div.familyImg {
   margin-bottom: -30rem;
+}
+main section#productDescription {
+  margin-top: 28rem;
+  height: 30rem;
+}
+main section#productDescription div.sectionContainer div.productContainer h2 {
+  font-size: 7rem;
 }
 
 /* ============= RESPONSIVE ===================== */
-@media (max-width: 1050px) {
-  main section {
-    width: 100vw;
-  }
-  main section#planView {
-    flex-wrap: wrap;
-  }
-  main section#planView div.viewPlans {
-    height: 60rem;
-  }
-  main section#planView div.viewPlans article {
-    text-align: center;
-  }
-  main section#planView div.viewPlans article h1 {
-    font-size: 5.6rem;
-  }
-  main section#planView div.viewPlans button.genericButton {
-    margin: 0 15rem;
-  }
-  main section#planView div.familyImg img {
-    margin-bottom: 0rem;
-    width: 100vw;
-  }
-}
 
 /*# sourceMappingURL=converted.css.map */
