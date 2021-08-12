@@ -15,11 +15,13 @@ $Grayish-Blue: hsl(216, 30%, 68%);
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; 
 }
 
 
 body {
+    width: 100%;
+    font-family: 'Karla', sans-serif;
     a {
         text-decoration: none;
     }
@@ -36,12 +38,12 @@ body {
 }
 
 .sectionContainer {
-    width: 80vw;
+    width: 80%;
     margin: auto;
 }
 /* >> HEADER << */
 header {
-    width: 100vw;
+    width: 100%;
     padding: 2rem 0;
     font-family: 'DM Serif Display', serif;
 
@@ -72,12 +74,12 @@ header {
 
 /* >> MAIN << */
 main {
-    width: 100vw;
+    width: 100%;
     font-family: 'Karla', sans-serif;
 
     section#planView {
         background-color: $Dark-Violet;
-        width: 100vw;
+        width: 100%;
 
         div.sectionContainer {
             height: 65rem;
@@ -131,17 +133,95 @@ main {
     }
 
     section#productDescription {
-        margin-top: 28rem;
-        height: 30rem;
+        margin-top: 30rem;
 
         div.sectionContainer {
-            div.productContainer {
-                h2 {
-                    
+                h2 {                 
                     font-size: 7rem;
+                    margin-bottom: 7rem;
                 }
-            }
+
+                div.productBenefits {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    div.productBenefit {
+                        width: 32%;
+
+                        h3 {
+                            font-size: 2.4rem;
+                            margin: 2rem 0;
+                        }
+
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 1.8;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+
+            
         }
     }
 }
 /* ============= RESPONSIVE ===================== */
+@media(max-width: 925px) {
+    header {
+        .header-container {
+            nav {
+                display: none;
+            }
+        }
+    }
+    body {
+        width: 100%;
+    }
+    
+    main {
+        section#planView {
+            div.sectionContainer {
+                flex-wrap: wrap-reverse;
+                height: auto;
+                width: 100%;
+                margin: 0;
+                
+                div.viewPlans {
+                    height: auto;
+                    padding: 2rem;
+                    text-align: center;
+                    .line {
+                        display: none;
+                    }
+
+                    article {
+                        color: $Very-Light-Gray;
+        
+                        h1 {
+                            font-size: 4.2rem;
+                            font-weight: 700;
+                        }
+        
+                        p {
+                            font-size: 1.6rem;
+                            
+                        }
+                    }
+                }
+                div.familyImg {
+                    margin-bottom: 0;
+                    width: 100%;
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        section#productDescription {
+            margin-top: 10vh;
+        }
+    }
+}  
