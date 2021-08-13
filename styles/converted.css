@@ -127,9 +127,71 @@ main section#productDescription div.sectionContainer div.productBenefits div.pro
   line-height: 1.8;
   opacity: 0.6;
 }
+main section#aboutUs {
+  height: 20rem;
+  margin: 15rem 0;
+}
+main section#aboutUs div.sectionContainer {
+  background-color: #2b272f;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 5rem;
+}
+main section#aboutUs div.sectionContainer h2 {
+  width: 45%;
+  font-size: 5rem;
+}
+main section#aboutUs div.sectionContainer button.genericButton {
+  border: 2px solid #fafafa;
+  color: #fafafa;
+  font-size: 1.4rem;
+  width: 15rem;
+}
+
+footer {
+  background-color: rgba(240, 238, 241, 0.685);
+}
+footer div.sectionContainer {
+  padding: 5rem 0;
+}
+footer div.sectionContainer div.socialMedias {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer div.sectionContainer div.socialMedias a {
+  margin-left: 2rem;
+}
+footer div.sectionContainer div.line {
+  background-color: rgba(173, 173, 173, 0.52);
+  color: transparent;
+  margin: 2rem 0;
+  height: 0.1rem;
+}
+footer div.sectionContainer div.footerSections {
+  display: flex;
+}
+footer div.sectionContainer div.footerSections div.footerSection {
+  width: 40%;
+  margin-right: 9rem;
+}
+footer div.sectionContainer div.footerSections div.footerSection h3 {
+  font-size: 1.6rem;
+  color: #837d87;
+  margin-bottom: 2rem;
+}
+footer div.sectionContainer div.footerSections div.footerSection a {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  color: #2b272f;
+  display: block;
+}
 
 /* ============= RESPONSIVE ===================== */
-@media (max-width: 925px) {
+@media (max-width: 425px) {
   header .header-container nav {
     display: none;
   }
@@ -138,6 +200,10 @@ main section#productDescription div.sectionContainer div.productBenefits div.pro
     width: 100%;
   }
 
+  main section {
+    width: 90%;
+    margin: auto;
+  }
   main section#planView div.sectionContainer {
     flex-wrap: wrap-reverse;
     height: auto;
@@ -171,6 +237,58 @@ main section#productDescription div.sectionContainer div.productBenefits div.pro
   }
   main section#productDescription {
     margin-top: 10vh;
+    width: 100%;
+  }
+  main section#productDescription div.sectionContainer {
+    text-align: center;
+    width: 100%;
+  }
+  main section#productDescription div.sectionContainer div.productBenefits {
+    flex-wrap: wrap;
+  }
+  main section#productDescription div.sectionContainer div.productBenefits div.productBenefit {
+    width: 100%;
+    margin: 2rem 0;
+  }
+  main section#aboutUs {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 15rem;
+  }
+  main section#aboutUs div.sectionContainer {
+    width: 100%;
+    height: auto;
+    padding: 5rem 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  main section#aboutUs div.sectionContainer h2 {
+    font-size: 3.6rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  main section#aboutUs div.sectionContainer button {
+    margin: auto;
+  }
+
+  footer div.sectionContainer div.socialMedias {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer div.sectionContainer div.socialMedias > img {
+    width: 40%;
+    margin-bottom: 4rem;
+  }
+  footer div.sectionContainer div.socialMedias div.medias {
+    width: 61%;
+  }
+  footer div.sectionContainer div.footerSections {
+    flex-wrap: wrap;
+  }
+  footer div.sectionContainer div.footerSections div.footerSection {
+    width: 100%;
+    margin: 0 auto 2rem;
+    text-align: center;
   }
 }
 

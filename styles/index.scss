@@ -165,9 +165,87 @@ main {
             
         }
     }
+
+    section#aboutUs {
+        height: 20rem;
+        margin: 15rem 0;
+
+        div.sectionContainer{
+            background-color: $Very-Dark-Violet;
+            color: $Very-Light-Gray;
+
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+
+            height: 100%;
+            padding: 0 5rem;
+
+            h2 {
+                width: 45%;
+                font-size: 5.0rem;
+            }
+
+            button.genericButton{
+                border: 2px solid $Very-Light-Gray;
+                color: $Very-Light-Gray;
+                font-size: 1.4rem;
+                width: 15rem;
+            }
+            
+        }  
+    }
+}
+
+footer {
+    background-color: rgba(240, 238, 241, 0.685);
+
+    div.sectionContainer {
+         padding: 5rem 0;
+
+         div.socialMedias {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+
+             a {
+                 margin-left: 2rem;
+             }
+         }
+
+         div.line {
+            background-color:  rgba(173, 173, 173, 0.52);
+            color: transparent;
+            margin: 2rem 0;
+            height: 0.1rem;
+         }
+
+         div.footerSections {
+            display: flex;
+            
+
+            div.footerSection {
+                width: 40%;
+                margin-right: 9rem;
+
+                h3 {    
+                    font-size: 1.6rem;
+                    color: $Dark-Grayish-Violet;
+                    margin-bottom: 2rem;
+                }
+
+                a {
+                    margin-bottom: .8rem;
+                    font-size: 1.4rem;
+                    color: $Very-Dark-Violet;  
+                    display: block;  
+                }
+            }
+         }
+    }
 }
 /* ============= RESPONSIVE ===================== */
-@media(max-width: 925px) {
+@media(max-width: 425px) {
     header {
         .header-container {
             nav {
@@ -175,11 +253,17 @@ main {
             }
         }
     }
+
     body {
         width: 100%;
     }
     
     main {
+        section {
+            width: 90%;
+            margin: auto;
+        }
+
         section#planView {
             div.sectionContainer {
                 flex-wrap: wrap-reverse;
@@ -222,6 +306,75 @@ main {
 
         section#productDescription {
             margin-top: 10vh;
+            width: 100%;
+
+            div.sectionContainer {
+                text-align: center;
+                width: 100%;
+
+                div.productBenefits{
+                    flex-wrap: wrap;
+    
+                    div.productBenefit {
+                        width: 100%;                        
+                        margin: 2rem 0;
+                    }
+                }
+            }
+        }
+
+        section#aboutUs {
+            width:90%;
+            height: auto;
+            margin:  0 auto 15rem;
+
+            div.sectionContainer {
+                width: 100%;
+                height: auto;
+                padding: 5rem 2rem;
+
+                flex-wrap: wrap;
+                text-align: center;
+
+                h2 {
+                    font-size: 3.6rem;
+                    width: 100%;
+                    margin-bottom: 4rem;
+                }
+
+                button {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    footer {
+        div.sectionContainer {
+
+            div.socialMedias {
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                > img {
+                    width: 40%;
+                    margin-bottom: 4rem;
+                }
+
+                div.medias {
+                    width: 61%;
+                }
+            }
+
+            div.footerSections {
+                flex-wrap: wrap;
+
+                div.footerSection {
+                    width: 100%;
+                    margin: 0 auto 2rem;
+                    text-align: center
+                }
+            }
         }
     }
 }  
