@@ -35,6 +35,25 @@ body {
     padding: 1rem 2.5rem;
     font-family: 'DM Serif Display', serif;
     background: transparent;
+    transition: .5s all;
+    transform: scale(1)  
+}
+
+.genericButton:hover {
+    transition: .5s all;
+    transform: scale(1.05);
+}
+
+.genericButton.whiteButton:hover {
+    border: 2px solid $Very-Dark-Violet;
+    background-color: $Very-Dark-Violet;
+    color: $Very-Light-Gray;
+}
+
+button.genericButton.blackButton:hover {
+    border: 2px solid $Very-Light-Gray;
+    background: $Very-Light-Gray;
+    color: $Very-Dark-Violet;
 }
 
 .sectionContainer {
@@ -63,10 +82,18 @@ header {
                 font-weight: 400;
             }
 
+            a:hover {
+                color: $Very-Dark-Violet;
+            } 
+
             button {
                 margin: 0 0 0 2rem;
                 border: 2px solid $Dark-Grayish-Violet;
             }
+        }
+
+        nav#mobileVersion {
+            display: none;
         }
     }
 }
@@ -122,10 +149,20 @@ main {
                     font-size: 1.4rem;
                     width: 15rem;
                 }
+
+                button.genericButton.blackButton:hover {
+                    border: 2px solid $Very-Light-Gray;
+                    background: $Very-Light-Gray;
+                    color: $Very-Dark-Violet;
+                }
             }
     
             div.familyImg {
                 margin-bottom: -30rem;
+
+                img#familyMobile {
+                    display: none;
+                }
             }
         }
 
@@ -192,6 +229,12 @@ main {
                 font-size: 1.4rem;
                 width: 15rem;
             }
+
+            button.genericButton.blackButton:hover {
+                border: 2px solid $Very-Light-Gray;
+                background: $Very-Light-Gray;
+                color: $Very-Dark-Violet;
+            }
             
         }  
     }
@@ -238,18 +281,97 @@ footer {
                     margin-bottom: .8rem;
                     font-size: 1.4rem;
                     color: $Very-Dark-Violet;  
-                    display: block;  
+                    display: block;
                 }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+                
             }
          }
     }
 }
 /* ============= RESPONSIVE ===================== */
-@media(max-width: 425px) {
+@media(max-width: 1200px) and (min-width: 701px  ) {
+        main {
+            text-align: center;
+
+            section#planView {
+                width: 100%;
+
+
+                div.sectionContainer {
+                    width: 100%;
+                    flex-wrap: wrap;
+
+                   div.viewPlans {
+                       width: 80%;
+                       margin: 0 auto 3rem;
+                   }
+
+                   div.familyImg {
+                       margin: auto;
+                   }
+                }
+            }
+
+            section#productDescription {
+                margin: 50rem 0 0;
+            }
+        }
+}
+
+@media(max-width: 700px) {
     header {
+        height: 10vh;
+
         .header-container {
-            nav {
+            nav#desktopVersion {
                 display: none;
+            }
+
+            nav#mobileVersion {
+                display: block;
+
+                button {
+                    border: none;
+                }
+
+                div.modal-options {
+                    z-index: 999;
+                    position: fixed;
+                    inset: 0;
+
+                    margin-top: 10vh;
+                    padding: 0 2rem;
+                    height: 90vh;
+
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                div.modal-options.open { 
+                    opacity: 1;
+                    visibility: visible;
+                    background-color: $Very-Dark-Violet;
+
+                    button {
+                        display: block;
+                        margin: 5rem auto;
+                        border: 2px solid transparent;
+                        padding: 2rem 0;
+                        width: 100%;
+
+                        font-size: 1.8rem;
+                        background-color: transparent;
+                        color: $Very-Light-Gray;         
+                    }
+
+                    button:hover {
+                        border: 2px solid $Very-Light-Gray;
+                    }
+                }
             }
         }
     }
@@ -265,6 +387,8 @@ footer {
         }
 
         section#planView {
+            width: 100%;
+
             div.sectionContainer {
                 flex-wrap: wrap-reverse;
                 height: auto;
@@ -299,6 +423,14 @@ footer {
                     
                     img {
                         width: 100%;
+                    }
+
+                    img#familyDesktop {
+                        display: none;
+                    }
+
+                    img#familyMobile {
+                        display: block
                     }
                 }
             }
@@ -372,7 +504,7 @@ footer {
                 div.footerSection {
                     width: 100%;
                     margin: 0 auto 2rem;
-                    text-align: center
+                    text-align: center;
                 }
             }
         }

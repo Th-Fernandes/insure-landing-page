@@ -23,11 +23,24 @@
         <img src="./images/logo.svg" alt="insure" />
       </div>
 
-      <nav>
+      <nav id="desktopVersion">
         <a href="#">HOW WE WORK</a>
         <a href="#">BLOG</a>
         <a href="#">ACCOUNT</a>
-        <button class="genericButton">VIEW PLANS</button>
+        <button class="genericButton whiteButton">VIEW PLANS</button>
+      </nav>
+
+      <nav id="mobileVersion">
+        <button onclick="modal.open()">
+          <img   src="./images/icon-close.svg" alt="close options">
+        </button>
+
+        <div class="modal-options">
+          <button>HOW WE WORK</button>
+          <button>BLOG</button>
+          <button>ACCOUNT</button>
+          <button>VIEW PLANS</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -49,11 +62,12 @@
             </p>
           </article>
   
-          <button class="genericButton">VIEW PLANS</button>
+          <button class="genericButton blackButton">VIEW PLANS</button>
         </div>
   
         <div class="familyImg">
-          <img src="./images/image-intro-desktop.jpg" alt="">
+          <img id="familyDesktop" src="./images/image-intro-desktop.jpg" alt="">
+          <img id="familyMobile" src="./images/image-intro-mobile.jpg" alt="">
         </div>
        </div>
      </section>
@@ -111,7 +125,7 @@
           Find out more about how we work
         </h2>
 
-        <button class="genericButton">
+        <button class="genericButton blackButton">
           How we work
         </button>
       </div>
@@ -180,5 +194,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="./scripts.js"></script>
 </body>
 </html>

@@ -25,6 +25,25 @@ body button {
   padding: 1rem 2.5rem;
   font-family: "DM Serif Display", serif;
   background: transparent;
+  transition: 0.5s all;
+  transform: scale(1);
+}
+
+.genericButton:hover {
+  transition: 0.5s all;
+  transform: scale(1.05);
+}
+
+.genericButton.whiteButton:hover {
+  border: 2px solid #2b272f;
+  background-color: #2b272f;
+  color: #fafafa;
+}
+
+button.genericButton.blackButton:hover {
+  border: 2px solid #fafafa;
+  background: #fafafa;
+  color: #2b272f;
 }
 
 .sectionContainer {
@@ -51,9 +70,15 @@ header .header-container nav a, header .header-container nav button {
   margin-right: 2rem;
   font-weight: 400;
 }
+header .header-container nav a:hover {
+  color: #2b272f;
+}
 header .header-container nav button {
   margin: 0 0 0 2rem;
   border: 2px solid #837d87;
+}
+header .header-container nav#mobileVersion {
+  display: none;
 }
 
 /* >> MAIN << */
@@ -100,8 +125,16 @@ main section#planView div.sectionContainer div.viewPlans button.genericButton {
   font-size: 1.4rem;
   width: 15rem;
 }
+main section#planView div.sectionContainer div.viewPlans button.genericButton.blackButton:hover {
+  border: 2px solid #fafafa;
+  background: #fafafa;
+  color: #2b272f;
+}
 main section#planView div.sectionContainer div.familyImg {
   margin-bottom: -30rem;
+}
+main section#planView div.sectionContainer div.familyImg img#familyMobile {
+  display: none;
 }
 main section#productDescription {
   margin-top: 30rem;
@@ -150,6 +183,11 @@ main section#aboutUs div.sectionContainer button.genericButton {
   font-size: 1.4rem;
   width: 15rem;
 }
+main section#aboutUs div.sectionContainer button.genericButton.blackButton:hover {
+  border: 2px solid #fafafa;
+  background: #fafafa;
+  color: #2b272f;
+}
 
 footer {
   background-color: rgba(240, 238, 241, 0.685);
@@ -189,11 +227,73 @@ footer div.sectionContainer div.footerSections div.footerSection a {
   color: #2b272f;
   display: block;
 }
+footer div.sectionContainer div.footerSections div.footerSection a:hover {
+  text-decoration: underline;
+}
 
 /* ============= RESPONSIVE ===================== */
-@media (max-width: 425px) {
-  header .header-container nav {
+@media (max-width: 1200px) and (min-width: 701px) {
+  main {
+    text-align: center;
+  }
+  main section#planView {
+    width: 100%;
+  }
+  main section#planView div.sectionContainer {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  main section#planView div.sectionContainer div.viewPlans {
+    width: 80%;
+    margin: 0 auto 3rem;
+  }
+  main section#planView div.sectionContainer div.familyImg {
+    margin: auto;
+  }
+  main section#productDescription {
+    margin: 50rem 0 0;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    height: 10vh;
+  }
+  header .header-container nav#desktopVersion {
     display: none;
+  }
+  header .header-container nav#mobileVersion {
+    display: block;
+  }
+  header .header-container nav#mobileVersion button {
+    border: none;
+  }
+  header .header-container nav#mobileVersion div.modal-options {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    margin-top: 10vh;
+    padding: 0 2rem;
+    height: 90vh;
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .header-container nav#mobileVersion div.modal-options.open {
+    opacity: 1;
+    visibility: visible;
+    background-color: #2b272f;
+  }
+  header .header-container nav#mobileVersion div.modal-options.open button {
+    display: block;
+    margin: 5rem auto;
+    border: 2px solid transparent;
+    padding: 2rem 0;
+    width: 100%;
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: #fafafa;
+  }
+  header .header-container nav#mobileVersion div.modal-options.open button:hover {
+    border: 2px solid #fafafa;
   }
 
   body {
@@ -203,6 +303,9 @@ footer div.sectionContainer div.footerSections div.footerSection a {
   main section {
     width: 90%;
     margin: auto;
+  }
+  main section#planView {
+    width: 100%;
   }
   main section#planView div.sectionContainer {
     flex-wrap: wrap-reverse;
@@ -234,6 +337,12 @@ footer div.sectionContainer div.footerSections div.footerSection a {
   }
   main section#planView div.sectionContainer div.familyImg img {
     width: 100%;
+  }
+  main section#planView div.sectionContainer div.familyImg img#familyDesktop {
+    display: none;
+  }
+  main section#planView div.sectionContainer div.familyImg img#familyMobile {
+    display: block;
   }
   main section#productDescription {
     margin-top: 10vh;
